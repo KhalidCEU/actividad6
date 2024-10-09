@@ -160,7 +160,7 @@ En este código hay 4 casos:
 
     Que sucede ? En este caso, al ser un posincremento
      1. Se imprime primero el valor de i (que es 1) y luego se incrementa (ahora i = 2)
-     2. Se evalua la condicion i < 0, lo que sería 2 < 0 con lo cual es **falso**
+     2. Se evalua la condición i < 0, lo que sería 2 < 0 con lo cual es **falso**
      3. Se para de ejecutar el bucle
 
 <br>
@@ -191,10 +191,10 @@ En este código hay 4 casos:
 **R:**
 1. Declaramos e inicializamos la variable **i** con un valor de 1
 2. Declaramos e inicializamos la variable **suma** con un valor de 0
-3. Creamos un bucle **while** donde la condicion que se evalúa es : "mientras que **i** sea menor o igual a 100"
+3. Creamos un bucle **while** donde la condición que se evalúa es : "mientras que **i** sea menor o igual a 100"
 4. Dentro del bucle sumamos el valor actual de **i** a **suma**
 5. Incrementamos el valor de **i** (equivalente a hacer ```i = i + 1``` o ```i += 1```)
-6. Si la condicion ```i <= 100``` sigue siendo verdadera, el bucle se sigue ejecutando hasta que la condicion sea falsa.
+6. Si la condición ```i <= 100``` sigue siendo verdadera, el bucle se sigue ejecutando hasta que la condición sea falsa.
 7. Una vez que el bucle termina, hacemos un print del valor de **suma**
 
 <br>
@@ -227,7 +227,7 @@ Este código nos dara el mismo resultado que el anterior, solo que en vez de usa
 1. Declaramos e inicializamos la variable **suma** con un valor de 0
 2. Creamos un bucle **for** donde:
     - Declaramos e inicializamos la variable **i** con un valor de 1 ```int i = 1```
-    - Ponemos la condicion que se evalúa  : "mientras que **i** sea menor o igual a 100" ```i <= 100```
+    - Ponemos la condición que se evalúa  : "mientras que **i** sea menor o igual a 100" ```i <= 100```
     - Incrementamos el valor de **i** en cada iteración ```i++```
 3. Dentro del bucle, sumamos el valor actual de **i** a **suma** en cada iteración
 4. Una vez que termina el bucle (es decir, una vez que ya no sea menor o igual a 100), imprimimos el valor de suma
@@ -319,7 +319,7 @@ Esto quiere decir que se como resultado obtendremos los valores de todas las pos
     - Declaramos e inicializamos la variable k con un valor de 0 : ```int k = 0```;
     - Declaramos la condición que se evaluará : "mientras que k sea estrictamente menor a la longitud del array x : ```k < x.length)```
     - Incrementamos el valor de k a cada iteración : ```k++```
-2. Dentro de este bucle, imprimimos el valor de la **posicion k** del array **x** ```System.out.println(x[k]);```
+2. Dentro de este bucle, imprimimos el valor de la **posición k** del array **x** ```System.out.println(x[k]);```
 
 Esto nos dará el mismo resultado que el bucle while anterior, la única diferencia es que el incremento de **k** se hace dentro de la declaración del for, mientras que en el while se hacía dentro del print.
 
@@ -329,7 +329,7 @@ Esto nos dará el mismo resultado que el bucle while anterior, la única diferen
             do System.out.println(x[l++]);while(l < x.length - 1);
 
 1. Declaramos e inicializamos la variable **l** con un valor de 0;  ```int l = 0;```
-2. Declaramos un **do** en el que indicamos que queremos ejecutar un print de la posicion posincremento de l en el array **x**  ```do System.out.println(x[l++])```
+2. Declaramos un **do** en el que indicamos que queremos ejecutar un print de la posición posincremento de l en el array **x**  ```do System.out.println(x[l++])```
 3. Declaramos un **while** en el que indicamos hasta cuando se ejecutara ese **do** (mientras que el valor de **l** sea estrictamente menor que el resultado de (**longitud del array x** - **1**)) ```while(l < x.length - 1);```
 
 Como la longitud del array x es 10 (posiciones del 0 al 9), aquí lo que sucederá es que nos imprimirá un valor menos (hasta que l sea igual a 9 -> posición 8 del array) . El resultado sería lo siguiente (unicamente los valores y separados por un salto de linea). He aqui una representación del array (valores y posiciones):
@@ -363,7 +363,7 @@ longitud del array?
 
 **P:** ¿Por qué el bucle do-while tiene una condición diferente a la de los otros dos?
 
-**R:** A diferencia de los otros bucles, **do-while** siempre se ejecuta al menos una vez, aunque la condición que haya en el **while** sea falsa. Aqui utilizamos ```x.length - 1``` para imprimir hasta la penultima posicion del array, es decir no imprimir el ultimo elemento. Aún así, en nuestro ejemplo si hubieramos usado un ```x.length``` en el **do-while** tambien habría funcionado y nos hubiera impreso todos los elementos.
+**R:** A diferencia de los otros bucles, **do-while** siempre se ejecuta al menos una vez, aunque la condición que haya en el **while** sea falsa. Aqui utilizamos ```x.length - 1``` para imprimir hasta la penultima posición del array, es decir no imprimir el ultimo elemento. Aún así, en nuestro ejemplo si hubieramos usado un ```x.length``` en el **do-while** tambien habría funcionado y nos hubiera impreso todos los elementos.
 
 <br>
 
@@ -385,4 +385,4 @@ Por ejemplo, en nuestro caso:
     while(l < x.length - 1);        // < aunque esta condición sea falsa
 ```
 
-Con lo cual, el criterio para elegir entre un **do-while** y un **while** es si queremos que se ejecute nuestro código al menos una vez, o si queremos que se verifique estrictamente nuestra condicion antes de ejecutarlo o no.
+Con lo cual, el criterio para elegir entre un **do-while** y un **while** es si queremos que se ejecute nuestro código al menos una vez, o si queremos que se verifique estrictamente nuestra condición antes de ejecutarlo o no.
