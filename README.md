@@ -152,5 +152,172 @@ En este código hay 4 casos:
      2. Se evalua la condicion i < 0, lo que sería 2 < 0 con lo cual es **falso**
      3. Se para de ejecutar el bucle
 
+**Ejercicio 20.4**
 
+**P:** Explique el siguiente código
+
+```
+    public class Principal{
+        public static void main(String[] args)
+        {
+            int i = 1;
+            int suma = 0;
+            while(i <= 100){
+                suma = suma + i;
+                i++;
+            }
+            System.out.println(suma);
+        }
+    }
+```
+
+**R:**
+1. Declaramos e inicializamos la variable **i** con un valor de 1
+2. Declaramos e inicializamos la variable **suma** con un valor de 0
+3. Creamos un bucle **while** donde la condicion que se evalúa es : "mientras que **i** sea menor o igual a 100"
+4. Dentro del bucle sumamos el valor actual de **i** a **suma**
+5. Incrementamos el valor de **i** (equivalente a hacer ```i = i + 1``` o ```i += 1```)
+6. Si la condicion ```i <= 100``` sigue siendo verdadera, el bucle se sigue ejecutando hasta que la condicion sea falsa.
+7. Una vez que el bucle termina, hacemos un print del valor de **suma**
+
+
+**Ejercicio 20.5**
+
+**P:** Explique el siguiente código
+
+```
+    public class Principal{
+        public static void main(String[] args)
+        {
+            int suma = 0;
+            for(int i = 1; i <= 100; i++){
+                suma = suma + i;
+            }
+            System.out.println(suma);
+        }
+    }
+```
+
+**R:**
+
+Este código nos dara el mismo resultado que el anterior, solo que en vez de usar un bucle **while**, usamos un bucle **for**.
+
+1. Declaramos e inicializamos la variable **suma** con un valor de 0
+2. Creamos un bucle **for** donde:
+    - Declaramos e inicializamos la variable **i** con un valor de 1 ```int i = 1```
+    - Ponemos la condicion que se evalúa  : "mientras que **i** sea menor o igual a 100" ```i <= 100```
+    - Incrementamos el valor de **i** en cada iteración ```i++```
+3. Dentro del bucle, sumamos el valor actual de **i** a **suma** en cada iteración
+4. Una vez que termina el bucle (es decir, una vez que ya no sea menor o igual a 100), imprimimos el valor de suma
+
+
+**Ejercicio 20.6**
+
+**P:** Explique el siguiente código
+
+```
+public class Principal
+{
+    public static void main(String[] args)
+    {
+        int[] x = new int[10];
+
+        x[0] = 3;
+        x[1] = 6;
+        x[2] = 8;
+
+        int j = 0;
+
+        System.out.println(x[j++]);
+        System.out.println("BUCLE WHILE");
+        System.out.println("===========");
+        int i = 0;
+        while(i < x.length) System.out.println(x[i++]);
+
+        System.out.println("nBUCLE FOR");
+        System.out.println("==========");
+        for(int k = 0; k < x.length; k++) System.out.println(x[k]);
+
+        System.out.println("nBUCLE DO");
+        System.out.println("=========");
+        int l = 0;
+        do System.out.println(x[l++]);while(l < x.length - 1);
+    }
+}
+```
+
+**R:**
+
+En este código :
+
+1. Primero dclaramos un array de int's (enteros) con una longitud de 10```int[] x = new int[10];``` (las posiciones / "indices" van del 0 al 9).
+
+2. ```x[0] = 3;```: En la posición 0 de este array (es decir, su primer indice) le asignamos el valor 3.
+
+3. ```x[1] = 6;```: En la posición 1 de este array (es decir, su segundo indice) le asignamos el valor 6.
+
+4. ```x[2] = 8;```: En la posición 2 de este array (es decir, su tercer indice) le asignamos el valor 8.
+
+5. ```int j = 0;```: Declaramos una variable **j** con el valor **0**.
+
+6. Despues lo que hacemos es imprimir el valor de la **posición** del **posincremento de j** en el **array x**  : ```System.out.println(x[j++])```.
+
+Como aqui es **posincremento** de j, primero se évalua el valor de **j** (que sería 0) y despues se incrementa, con lo cual se imprimirá el valor de x[0], que es **3**.
+
+
+**Bucle while** :
+
+            int i = 0;
+            while(i < x.length) System.out.println(x[i++]);
+
+1. Declaramos e inicializamos la variable i con un valor de 0 ```int i = 0```;
+2. Declaramos un bucle **while** en la que se evalúa la condición : "mientras que i sea estrictamente menor a la longitud del array x (```while(i < x.length)```)
+3. Dentro de este bucle, se imprimirá a cada iteración el valor de la posición actual del array **x** en el que se encuentra el indice **i** y depues se hace el incremento de i (ya que es **posincremento**) ```System.out.println(x[i++]);```
+
+Esto quiere decir que se como resultado obtendremos los valores de todas las posiciones del array **x**, separados por saltos de linea. He aqui una representación del array (valores y posiciones) : 
+
+```
+(3 6 8 0 0 0 0 0 0 0)   <- Valores
+ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+ 0 1 2 3 4 5 6 7 8 9    <- Posiciones / indices
+```
+
+(Los 0's que van despues se deben a que es el valor por defecto de las posiciones a las que no les hemos asignado un valor despues de haber declarado el array)
+
+**Bucle for** :
+
+        for(int k = 0; k < x.length; k++) System.out.println(x[k]);
+
+1. Declaramos un bucle **for** en el que:
+    - Declaramos e inicializamos la variable k con un valor de 0 : ```int k = 0```;
+    - Declaramos la condición que se evaluará : "mientras que k sea estrictamente menor a la longitud del array x : ```k < x.length)```
+    - Incrementamos el valor de k a cada iteración : ```k++```
+2. Dentro de este bucle, imprimimos el valor de la **posicion k** del array **x** ```System.out.println(x[k]);```
+
+Esto nos dará el mismo resultado que el bucle while anterior, la única diferencia es que el incremento de **k** se hace dentro de la declaración del for, mientras que en el while se hacía dentro del print.
+
+**Bucle do** :
+
+            int l = 0;
+            do System.out.println(x[l++]);while(l < x.length - 1);
+
+1. Declaramos e inicializamos la variable **l** con un valor de 0;  ```int l = 0;```
+2. Declaramos un **do** en el que indicamos que queremos ejecutar un print de la posicion posincremento de l en el array **x**  ```do System.out.println(x[l++])```
+3. Declaramos un **while** en el que indicamos hasta cuando se ejecutara ese **do** (mientras que el valor de **l** sea estrictamente menor que el resultado de (**longitud del array x** - **1**)) ```while(l < x.length - 1);```
+
+Como la longitud del array x es 10 (posiciones del 0 al 9), aquí lo que sucederá es que nos imprimirá un valor menos (hasta que l sea igual a 9 -> posición 8 del array) . El resultado sería lo siguiente (unicamente los valores y separados por un salto de linea). He aqui una representación del array (valores y posiciones):
+
+```
+(3 6 8 0 0 0 0 0 0)   <- Valores
+ ^ ^ ^ ^ ^ ^ ^ ^ ^
+ 0 1 2 3 4 5 6 7 8    <- Posiciones / indices
+```
+
+
+**Ejercicio 20.7**
+
+**P:** ¿Qué ocurre si se intenta acceder a una posición mayor o igual a la
+longitud del array?
+
+**R:** Si intentamos acceder a una posición mayor o igual a la longitud del array, obtendremos un error que nos indicará que estamos accediendo a una posición que está fuera de rango (un error "**IndexOutOfBounds**"), ya que estaríamos intentando acceder a un lugar de la memoria que no hemos reservado para ese array.
 
