@@ -65,6 +65,11 @@ En este código que se ejecuta directamente en la funcion **main** (punto de ent
 
 Con lo cual obtendremos como output una lista del 1 al 10 (separada por saltos de linea)
 
+<br>
+
+---
+
+<br>
 
 **Ejercicio 20.2**
 
@@ -91,6 +96,12 @@ A diferencia del while, en el for :
 PS:  Aquí ya que incrementamos el valor de i dentro del **for**, nos basta con hacer ```...println(i)``` y no ```...println(i++)``` como hicimos en el caso del while (donde el valor se imprime antes del incremento).
 
 Obtendremos como resultado lo mismo que en el caso anterior, una lista del 1 al 10 separada por saltos de linea.
+
+<br>
+
+---
+
+<br>
 
 **Ejercicio 20.3**
 
@@ -152,6 +163,12 @@ En este código hay 4 casos:
      2. Se evalua la condicion i < 0, lo que sería 2 < 0 con lo cual es **falso**
      3. Se para de ejecutar el bucle
 
+<br>
+
+---
+
+<br>
+
 **Ejercicio 20.4**
 
 **P:** Explique el siguiente código
@@ -180,6 +197,11 @@ En este código hay 4 casos:
 6. Si la condicion ```i <= 100``` sigue siendo verdadera, el bucle se sigue ejecutando hasta que la condicion sea falsa.
 7. Una vez que el bucle termina, hacemos un print del valor de **suma**
 
+<br>
+
+---
+
+<br>
 
 **Ejercicio 20.5**
 
@@ -210,6 +232,11 @@ Este código nos dara el mismo resultado que el anterior, solo que en vez de usa
 3. Dentro del bucle, sumamos el valor actual de **i** a **suma** en cada iteración
 4. Una vez que termina el bucle (es decir, una vez que ya no sea menor o igual a 100), imprimimos el valor de suma
 
+<br>
+
+---
+
+<br>
 
 **Ejercicio 20.6**
 
@@ -313,6 +340,11 @@ Como la longitud del array x es 10 (posiciones del 0 al 9), aquí lo que suceder
  0 1 2 3 4 5 6 7 8    <- Posiciones / indices
 ```
 
+<br>
+
+---
+
+<br>
 
 **Ejercicio 20.7**
 
