@@ -353,3 +353,36 @@ longitud del array?
 
 **R:** Si intentamos acceder a una posición mayor o igual a la longitud del array, obtendremos un error que nos indicará que estamos accediendo a una posición que está fuera de rango (un error "**IndexOutOfBounds**"), ya que estaríamos intentando acceder a un lugar de la memoria que no hemos reservado para ese array.
 
+<br>
+
+---
+
+<br>
+
+**Ejercicio 20.8**
+
+**P:** ¿Por qué el bucle do-while tiene una condición diferente a la de los otros dos?
+
+**R:** A diferencia de los otros bucles, **do-while** siempre se ejecuta al menos una vez, aunque la condición que haya en el **while** sea falsa. Aqui utilizamos ```x.length - 1``` para imprimir hasta la penultima posicion del array, es decir no imprimir el ultimo elemento. Aún así, en nuestro ejemplo si hubieramos usado un ```x.length``` en el **do-while** tambien habría funcionado y nos hubiera impreso todos los elementos.
+
+<br>
+
+---
+
+<br>
+
+**Ejercicio 20.9**
+
+**P:** ¿Qué criterio se utiliza para utilizar un bucle do-while en lugar de un
+bucle while.
+
+**R:** Como indiqué en la respuesta anterior, el **do-while** siempre se ejecuta al menos una vez
+
+Por ejemplo, en nuestro caso:
+
+```
+    do System.out.println(x[l++]);  // < Esto siempre se ejecutará al principio (1 vez)
+    while(l < x.length - 1);        // < aunque esta condición sea falsa
+```
+
+Con lo cual, el criterio para elegir entre un **do-while** y un **while** es si queremos que se ejecute nuestro código al menos una vez, o si queremos que se verifique estrictamente nuestra condicion antes de ejecutarlo o no.
