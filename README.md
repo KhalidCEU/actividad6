@@ -61,9 +61,9 @@ En este código que se ejecuta directamente en la funcion **main** (punto de ent
 
 1. Inicializamos una **variable i** con un **valor de 1**
 2. Usamos un bucle "**while**" que se **ejecutará** mientras que la condición que le hemos dado sea verdadera (es decir mientras que el valor de i sea menor o igual a 10)
-3. En cada iteración de este while, se ejecutará un **println** del **posincremento** de esta variable. Al ser un posincremento, primero se hará el print del valor de i y despues se incrementará
+3. En cada iteración de este while, se ejecutará un **println** del **posincremento** de esta variable. Al ser un posincremento, primero se hará el print del valor de i y después se incrementará
 
-Con lo cual obtendremos como output una lista del 1 al 10 (separada por saltos de linea)
+Con lo cual obtendremos como output una lista del 1 al 10 (separada por saltos de línea)
 
 <br>
 
@@ -95,7 +95,7 @@ A diferencia del while, en el for :
 
 PS:  Aquí ya que incrementamos el valor de i dentro del **for**, nos basta con hacer ```...println(i)``` y no ```...println(i++)``` como hicimos en el caso del while (donde el valor se imprime antes del incremento).
 
-Obtendremos como resultado lo mismo que en el caso anterior, una lista del 1 al 10 separada por saltos de linea.
+Obtendremos como resultado lo mismo que en el caso anterior, una lista del 1 al 10 separada por saltos de línea.
 
 <br>
 
@@ -137,13 +137,13 @@ En este código hay 4 casos:
 
     Se declara la variable i y se incializa a 1, mientras que i sea menor o igual que 10, imprimimos el resultado del posincremento de esta variable.
 
-    **Output:**  Lista del 1 al 10 separada por saltos de linea.
+    **Output:**  Lista del 1 al 10 separada por saltos de línea.
 
 - **Primer** bucle **do-while**:
 
     Se le asigna a i el valor a 1. Con el keyword "**do**" definiremos lo que queremos ejecutar (es decir, imprimir el posincremento de i) y luego el "**while**" que nos indicará la condición que se evaluará (mientras i sea menor o igual que 10).
 
-    **Output:** Lista del 1 al 10 separada por saltos de linea.
+    **Output:** Lista del 1 al 10 separada por saltos de línea.
 
 - **Segundo** bucle **while**:
 
@@ -158,7 +158,7 @@ En este código hay 4 casos:
 
     **Output:**  1
 
-    Que sucede ? En este caso, al ser un posincremento
+    Qué sucede ? En este caso, al ser un posincremento
      1. Se imprime primero el valor de i (que es 1) y luego se incrementa (ahora i = 2)
      2. Se evalua la condición i < 0, lo que sería 2 < 0 con lo cual es **falso**
      3. Se para de ejecutar el bucle
@@ -222,7 +222,7 @@ En este código hay 4 casos:
 
 **R:**
 
-Este código nos dara el mismo resultado que el anterior, solo que en vez de usar un bucle **while**, usamos un bucle **for**.
+Este código nos dará el mismo resultado que el anterior, solo que en vez de usar un bucle **while**, usamos un bucle **for**.
 
 1. Declaramos e inicializamos la variable **suma** con un valor de 0
 2. Creamos un bucle **for** donde:
@@ -277,19 +277,19 @@ public class Principal
 
 En este código :
 
-1. Primero dclaramos un array de int's (enteros) con una longitud de 10```int[] x = new int[10];``` (las posiciones / "indices" van del 0 al 9).
+1. Primero declaramos un array de int's (enteros) con una longitud de 10```int[] x = new int[10];``` (las posiciones / "índices" van del 0 al 9).
 
-2. ```x[0] = 3;```: En la posición 0 de este array (es decir, su primer indice) le asignamos el valor 3.
+2. ```x[0] = 3;```: En la posición 0 de este array (es decir, su primer índice) le asignamos el valor 3.
 
-3. ```x[1] = 6;```: En la posición 1 de este array (es decir, su segundo indice) le asignamos el valor 6.
+3. ```x[1] = 6;```: En la posición 1 de este array (es decir, su segundo índice) le asignamos el valor 6.
 
-4. ```x[2] = 8;```: En la posición 2 de este array (es decir, su tercer indice) le asignamos el valor 8.
+4. ```x[2] = 8;```: En la posición 2 de este array (es decir, su tercer índice) le asignamos el valor 8.
 
 5. ```int j = 0;```: Declaramos una variable **j** con el valor **0**.
 
-6. Despues lo que hacemos es imprimir el valor de la **posición** del **posincremento de j** en el **array x**  : ```System.out.println(x[j++])```.
+6. Después lo que hacemos es imprimir el valor de la **posición** del **posincremento de j** en el **array x**  : ```System.out.println(x[j++])```.
 
-Como aqui es **posincremento** de j, primero se évalua el valor de **j** (que sería 0) y despues se incrementa, con lo cual se imprimirá el valor de x[0], que es **3**.
+Como aqui es **posincremento** de j, primero se évalua el valor de **j** (que sería 0) y después se incrementa, con lo cual se imprimirá el valor de x[0], que es **3**.
 
 
 **Bucle while** :
@@ -299,17 +299,17 @@ Como aqui es **posincremento** de j, primero se évalua el valor de **j** (que s
 
 1. Declaramos e inicializamos la variable i con un valor de 0 ```int i = 0```;
 2. Declaramos un bucle **while** en la que se evalúa la condición : "mientras que i sea estrictamente menor a la longitud del array x (```while(i < x.length)```)
-3. Dentro de este bucle, se imprimirá a cada iteración el valor de la posición actual del array **x** en el que se encuentra el indice **i** y depues se hace el incremento de i (ya que es **posincremento**) ```System.out.println(x[i++]);```
+3. Dentro de este bucle, se imprimirá a cada iteración el valor de la posición actual del array **x** en el que se encuentra el índice **i** y depues se hace el incremento de i (ya que es **posincremento**) ```System.out.println(x[i++]);```
 
-Esto quiere decir que se como resultado obtendremos los valores de todas las posiciones del array **x**, separados por saltos de linea. He aqui una representación del array (valores y posiciones) : 
+Esto quiere decir que se como resultado obtendremos los valores de todas las posiciones del array **x**, separados por saltos de línea. He aqui una representación del array (valores y posiciones) :
 
 ```
 (3 6 8 0 0 0 0 0 0 0)   <- Valores
  ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
- 0 1 2 3 4 5 6 7 8 9    <- Posiciones / indices
+ 0 1 2 3 4 5 6 7 8 9    <- Posiciones / índices
 ```
 
-(Los 0's que van despues se deben a que es el valor por defecto de las posiciones a las que no les hemos asignado un valor despues de haber declarado el array)
+(Los 0's que van después se deben a que es el valor por defecto de las posiciones a las que no les hemos asignado un valor después de haber declarado el array)
 
 **Bucle for** :
 
@@ -332,12 +332,12 @@ Esto nos dará el mismo resultado que el bucle while anterior, la única diferen
 2. Declaramos un **do** en el que indicamos que queremos ejecutar un print de la posición posincremento de l en el array **x**  ```do System.out.println(x[l++])```
 3. Declaramos un **while** en el que indicamos hasta cuando se ejecutara ese **do** (mientras que el valor de **l** sea estrictamente menor que el resultado de (**longitud del array x** - **1**)) ```while(l < x.length - 1);```
 
-Como la longitud del array x es 10 (posiciones del 0 al 9), aquí lo que sucederá es que nos imprimirá un valor menos (hasta que l sea igual a 9 -> posición 8 del array) . El resultado sería lo siguiente (unicamente los valores y separados por un salto de linea). He aqui una representación del array (valores y posiciones):
+Como la longitud del array x es 10 (posiciones del 0 al 9), aquí lo que sucederá es que nos imprimirá un valor menos (hasta que l sea igual a 9 -> posición 8 del array). El resultado sería lo siguiente (únicamente los valores y separados por un salto de línea). He aqui una representación del array (valores y posiciones):
 
 ```
 (3 6 8 0 0 0 0 0 0)   <- Valores
  ^ ^ ^ ^ ^ ^ ^ ^ ^
- 0 1 2 3 4 5 6 7 8    <- Posiciones / indices
+ 0 1 2 3 4 5 6 7 8    <- Posiciones / índices
 ```
 
 <br>
